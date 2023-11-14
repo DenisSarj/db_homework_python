@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+
+  db:
+    image: postgres:12
+    environment:
+      - POSTGRES_DB=my_db
+      - POSTGRES_USER=DenisSarj
+      - POSTGRES_PASSWORD=30125916
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
+
+volumes:
+  db-data:
